@@ -3,14 +3,16 @@
 ## 量子回路図とヒストグラム
 
 ### 量子回路図
-![量子回路図](https://github.com/mzk8888/Q-/blob/main/quantum_circuit.png)
+![量子回路図](https://github.com/mzk8888/Q-/blob/main/quantum_circuit.png?raw=true)
 
 ### 測定結果のヒストグラム
-![ヒストグラム](https://github.com/mzk8888/Q-/blob/main/histogram.png)
+![ヒストグラム](https://github.com/mzk8888/Q-/blob/main/histogram.png?raw=true)
+
 
 ## 説明
 - **量子回路図**: 4つの量子ビットを使用した量子回路の構造
 - **ヒストグラム**: 測定結果の頻度分布（0000から1111までのバイナリ結果）
+
 
 
 
