@@ -1,0 +1,41 @@
+import qiskit.qasm3
+
+qasm = """
+OPENQASM 3.0;
+include "stdgates.inc";
+gate ecr _gate_q_0, _gate_q_1 {
+  s _gate_q_0;
+  sx _gate_q_1;
+  cx _gate_q_0, _gate_q_1;
+  x _gate_q_0;
+}
+bit[4] c;
+rz(-pi) $0;
+sx $0;
+rz(-pi/2) $1;
+sx $1;
+rz(-pi) $1;
+ecr $1, $0;
+rz(-pi) $0;
+sx $0;
+rz(pi/4) $0;
+sx $0;
+sx $1;
+rz(-pi) $2;
+sx $2;
+rz(pi/2) $2;
+rz(-pi/2) $3;
+sx $3;
+rz(-pi) $3;
+ecr $3, $2;
+rz(-pi/2) $2;
+sx $2;
+rz(3*pi/4) $2;
+x $3;
+c[0] = measure $0;
+c[1] = measure $1;
+c[2] = measure $2;
+c[3] = measure $3;
+
+"""
+circuit = qiskit.qasm3.loads(qasm)
